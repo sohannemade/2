@@ -1,0 +1,25 @@
+###Write a Python program that computes the net amount of a bank account based a transaction
+###log from console input. The transaction log format is shown as following: D 100 W 200 
+
+
+bal=0
+int(bal)
+list1=[]
+deposit="D"
+withdraw="W"
+i=0
+while i<=1:
+  c=input("Enter command:")
+  list1=c.split()
+  A=int(list1[1])
+  if list1[0]==deposit:
+        bal=bal+A
+  elif list1[0]==withdraw:
+      if bal<A:
+        print("Insufficient funds")
+      else:
+        bal=bal-A
+  else: 
+        print("invalid input")
+  
+  print("Available balance=",bal)
